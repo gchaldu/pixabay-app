@@ -1,10 +1,58 @@
+.contenedor-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .contenedor-pagination{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    width: 100%;
+}
+
+.grid-cards{
+    display: grid;
+    /* grid-template-areas: "img1 img1 img2 img3"
+                        "img4 img5 img6 img6"
+                        "img7 img7 img8 img9"
+                        "img10 img11 img12 img12"
+                        "img13 img14 img15 img15"
+                        "img16 img16 img17 img18"
+                        "img19 img20 img21 img21"
+                        "img22 img22 img23 img24"
+                        "img25 img26 img27 img27"
+                        "img28 img28 img29 img30"
+                        ; */
+    grid-template-columns: repeat(4, 1fr);
+    gap:2rem;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
 }
 a{
     cursor: pointer;
 }
+
+.tarjeta {
+    max-width: 30rem; /* ajusta el ancho máximo de la tarjeta según tus necesidades */
+  }
+  
+  .tarjeta img {
+    max-width: 100%; /* la imagen se ajustará al ancho máximo de la tarjeta */
+    height: auto; /* la altura se ajustará proporcionalmente a la imagen */
+  }
+  
+  .tarjeta .card-title {
+    font-size: 1.6rem; /* ajusta el tamaño del título según tus necesidades */
+  }
+  
+  .tarjeta .card-text {
+    font-size: 1.4rem; /* ajusta el tamaño del texto según tus necesidades */
+  }
+  
+  

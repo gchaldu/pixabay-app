@@ -1,4 +1,4 @@
-<div class="container mt-4">
+<!-- <div class="container mt-4">
   <app-spinner *ngIf="spinner"></app-spinner>
     <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col" *ngFor="let item of listaImagenes">
@@ -11,9 +11,22 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div *ngIf="listaImagenes.length>0">
+<div class="contenedor-principal">
+  <!-- <app-spinner *ngIf="spinner"></app-spinner> -->
+  <div class="grid-cards">
+        <div class="tarjeta" *ngFor="let item of listaImagenes">
+          <div>
+            <img [src]="item.largeImageURL">
+          </div>
+          <h5 class="card-title">{{item.tags}}</h5>
+          <p class="card-text">{{item.user}}</p>
+        </div>
+  </div>
+</div>
+
+<!-- <div *ngIf="listaImagenes.length>0">
     <ul class="pagination pagination-lg contenedor-pagination">
       <li class="page-item" *ngIf="paginaAnteriorClass()">
         <a class="page-link" (click)="anteriorPagina()">&laquo;Anterior</a>
@@ -22,5 +35,4 @@
         <a class="page-link" (click)="siguientePagina()">Siguiente&raquo;</a>
       </li>
     </ul>
-  </div>
-</div>
+  </div> -->
