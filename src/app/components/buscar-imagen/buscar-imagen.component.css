@@ -1,0 +1,42 @@
+.contenedor-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+.contenedor-buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgb(219, 218, 217);
+    width: 50%;
+    height: 10rem;
+    border-radius: .5rem;
+}
+.btn{
+    margin-left: 1rem;
+    background-color: rgb(255, 0, 225);
+    padding: .5rem 1rem;
+    color: white;
+    cursor: pointer;
+}
+input{
+    width: 100%;
+    flex: 60%;
+    font-size: 1.5rem;
+}
+a{
+    width: 100%;
+    flex: 40%;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+a:hover{
+    background-color: blueviolet;
+    transition: all .5s ease;
+}

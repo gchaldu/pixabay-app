@@ -1,0 +1,9 @@
+.contenedor-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    color: white;
+    padding-left: 1rem;
+    background-color: rgb(255, 0, 225);
+}
