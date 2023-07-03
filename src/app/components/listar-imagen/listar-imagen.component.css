@@ -41,7 +41,6 @@
 
 .grid-cards .tarjeta:nth-child(1){
     grid-area: img1;
-    width: 100%;
 }
 
 .btn{
@@ -53,21 +52,27 @@
     margin-bottom: 1rem;
 }
 
-.btn:hover{
-    background-color: blueviolet;
-}
-
-a.page-link{
-    background-color: rgb(255, 0, 225);
-    color: white;
-    cursor:pointer;
-}
-
-a.page-link:hover{
-    background-color: blueviolet;
-}
-
+.tarjeta a .icon {
+    min-width: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-left: .5rem;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+  }
 .tarjeta {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,19 +80,39 @@ a.page-link:hover{
     text-align: center;
     margin-top: 2rem;
     border-radius: .9rem;
-    background-color: rgb(244, 242, 242);
     height: 100%;
-    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
 }
+.tarjeta a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .tarjeta:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #28666e;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
 .tarjeta:hover{
     box-shadow: 0 0 5px rgba(5, 5, 5, 0.9); /* Sombra suave al hacer hover */
 }
 .tarjeta img {
     max-width: 100%;
-    height: auto;
-    border-top-right-radius:.9rem;
-    border-top-left-radius: .9rem;
-}
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
 .tarjeta h3{
     padding-left: .5rem;
     margin-top: .5rem;
