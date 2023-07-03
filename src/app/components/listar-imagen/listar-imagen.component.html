@@ -22,8 +22,11 @@
     </li>
   </ul>
 </div>
+<div class="contenedor-spinner">
+  <app-spinner *ngIf="spinner"></app-spinner>
+</div>
 <div class="contenedor-principal">
-  <!-- <app-spinner *ngIf="spinner"></app-spinner> -->
+  
   <div class="grid-cards">
     <div class="tarjeta" *ngFor="let item of listaImagenes">
       <div>
