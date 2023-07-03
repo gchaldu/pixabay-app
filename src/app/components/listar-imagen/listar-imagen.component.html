@@ -15,10 +15,10 @@
 <div *ngIf="listaImagenes.length>0">
   <ul class="pagination pagination-lg contenedor-pagination">
     <li class="page-item" *ngIf="paginaAnteriorClass()">
-      <a class="page-link" (click)="anteriorPagina()">&laquo;Anterior</a>
+      <a class="btn" (click)="anteriorPagina()">&laquo;Anterior</a>
     </li>
     <li class="page-item" *ngIf="paginaSiguienteClass()">
-      <a class="page-link" (click)="siguientePagina()">Siguiente&raquo;</a>
+      <a class="btn" (click)="siguientePagina()">Siguiente&raquo;</a>
     </li>
   </ul>
 </div>

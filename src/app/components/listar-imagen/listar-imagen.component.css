@@ -25,12 +25,12 @@
                         "img4 img5 img6 img6"
                         "img7 img7 img8 img9"
                         "img10 img11 img12 img12"
-                        "img13 img14 img15 img15"
-                        "img16 img16 img17 img18"
-                        "img19 img20 img21 img21"
-                        "img22 img22 img23 img24"
-                        "img25 img26 img27 img27"
-                        "img28 img28 img29 img30"
+                        "img13 img13 img14 img15"
+                        "img16 img17 img18 img18"
+                        "img19 img19 img20 img21"
+                        "img22 img23 img24 img24"
+                        "img25 img25 img26 img27"
+                        "img28 img29 img30 img30"
                         ;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -42,7 +42,33 @@
 .grid-cards .tarjeta:nth-child(1){
     grid-area: img1;
 }
-
+.grid-cards .tarjeta:nth-child(6){
+    grid-area: img6;
+}
+.grid-cards .tarjeta:nth-child(7){
+    grid-area: img7;
+}
+.grid-cards .tarjeta:nth-child(12){
+    grid-area: img12;
+}
+.grid-cards .tarjeta:nth-child(13){
+    grid-area: img13;
+}
+.grid-cards .tarjeta:nth-child(18){
+    grid-area: img18;
+}
+.grid-cards .tarjeta:nth-child(19){
+    grid-area: img19;
+}
+.grid-cards .tarjeta:nth-child(24){
+    grid-area: img24;
+}
+.grid-cards .tarjeta:nth-child(25){
+    grid-area: img25;
+}
+.grid-cards .tarjeta:nth-child(30){
+    grid-area: img30;
+}
 .btn{
     margin-left: 1rem;
     background-color: rgb(255, 0, 225);
