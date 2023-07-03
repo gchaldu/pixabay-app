@@ -12,27 +12,26 @@
       </div>
     </div>
   </div> -->
-
+<div *ngIf="listaImagenes.length>0">
+  <ul class="pagination pagination-lg contenedor-pagination">
+    <li class="page-item" *ngIf="paginaAnteriorClass()">
+      <a class="page-link" (click)="anteriorPagina()">&laquo;Anterior</a>
+    </li>
+    <li class="page-item" *ngIf="paginaSiguienteClass()">
+      <a class="page-link" (click)="siguientePagina()">Siguiente&raquo;</a>
+    </li>
+  </ul>
+</div>
 <div class="contenedor-principal">
   <!-- <app-spinner *ngIf="spinner"></app-spinner> -->
   <div class="grid-cards">
-        <div class="tarjeta" *ngFor="let item of listaImagenes">
-          <div>
-            <img [src]="item.largeImageURL">
-          </div>
-          <h5 class="card-title">{{item.tags}}</h5>
-          <p class="card-text">{{item.user}}</p>
-        </div>
+    <div class="tarjeta" *ngFor="let item of listaImagenes">
+      <div>
+        <img [src]="item.largeImageURL">
+      </div>
+      <h3 class="card-title">{{item.tags}}</h3>
+      <p class="card-text">{{item.user}}</p>
+      <a class="btn" [href]="item.largeImageURL" target="_blank">Abrir</a>
+    </div>
   </div>
 </div>
-
-<!-- <div *ngIf="listaImagenes.length>0">
-    <ul class="pagination pagination-lg contenedor-pagination">
-      <li class="page-item" *ngIf="paginaAnteriorClass()">
-        <a class="page-link" (click)="anteriorPagina()">&laquo;Anterior</a>
-      </li>
-      <li class="page-item" *ngIf="paginaSiguienteClass()">
-        <a class="page-link" (click)="siguientePagina()">Siguiente&raquo;</a>
-      </li>
-    </ul>
-  </div> -->

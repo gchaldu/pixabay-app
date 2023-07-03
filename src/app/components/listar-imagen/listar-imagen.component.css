@@ -1,4 +1,4 @@
-.contenedor-principal{
+.contenedor-principal {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.contenedor-pagination{
+.contenedor-pagination {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,9 +15,9 @@
     width: 100%;
 }
 
-.grid-cards{
+.grid-cards {
     display: grid;
-    /* grid-template-areas: "img1 img1 img2 img3"
+    grid-template-areas: "img1 img1 img2 img3"
                         "img4 img5 img6 img6"
                         "img7 img7 img8 img9"
                         "img10 img11 img12 img12"
@@ -27,32 +27,78 @@
                         "img22 img22 img23 img24"
                         "img25 img26 img27 img27"
                         "img28 img28 img29 img30"
-                        ; */
+                        ;
     grid-template-columns: repeat(4, 1fr);
-    gap:2rem;
+    gap: 1rem;
     width: 95%;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
-a{
+
+.grid-cards .tarjeta:nth-child(1){
+    grid-area: img1;
+    width: 100%;
+}
+
+.btn{
+    margin-left: 1rem;
+    background-color: rgb(255, 0, 225);
+    padding: .5rem 1rem;
+    color: white;
     cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.btn:hover{
+    background-color: blueviolet;
+}
+
+a.page-link{
+    background-color: rgb(255, 0, 225);
+    color: white;
+    cursor:pointer;
+}
+
+a.page-link:hover{
+    background-color: blueviolet;
 }
 
 .tarjeta {
-    max-width: 30rem; /* ajusta el ancho máximo de la tarjeta según tus necesidades */
-  }
-  
-  .tarjeta img {
-    max-width: 100%; /* la imagen se ajustará al ancho máximo de la tarjeta */
-    height: auto; /* la altura se ajustará proporcionalmente a la imagen */
-  }
-  
-  .tarjeta .card-title {
-    font-size: 1.6rem; /* ajusta el tamaño del título según tus necesidades */
-  }
-  
-  .tarjeta .card-text {
-    font-size: 1.4rem; /* ajusta el tamaño del texto según tus necesidades */
-  }
-  
-  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: .9rem;
+    background-color: rgb(244, 242, 242);
+    height: 100%;
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+.tarjeta:hover{
+    box-shadow: 0 0 5px rgba(5, 5, 5, 0.9); /* Sombra suave al hacer hover */
+}
+.tarjeta img {
+    max-width: 100%;
+    height: auto;
+    border-top-right-radius:.9rem;
+    border-top-left-radius: .9rem;
+}
+.tarjeta h3{
+    padding-left: .5rem;
+    margin-top: .5rem;
+}
+.tarjeta p{
+    padding-left: .5rem;
+    margin-top: .5rem;
+}
+
+.tarjeta .card-title {
+    font-size: 1.6rem;
+    /* ajusta el tamaño del título según tus necesidades */
+}
+
+.tarjeta .card-text {
+    font-size: 1.4rem;
+    /* ajusta el tamaño del texto según tus necesidades */
+}
